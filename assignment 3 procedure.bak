@@ -1,0 +1,13 @@
+
+(define square (lambda(x)(* x x)))
+(define double (lambda(x)(+ x x)))
+
+(define (compose f g)
+  (lambda (x) (f (g x))))
+
+
+(define (divisibleBy a)
+  (lambda(x)
+    (if (eq?(modulo x a) 0)
+        #t
+        #f)))
